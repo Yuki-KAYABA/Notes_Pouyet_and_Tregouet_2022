@@ -77,7 +77,11 @@ $$
 - To compute the buyer surplus, we consider that there exists a representative buyer with utility function $U_{B}(q_{1}, q_{2}, n_{S}^{1}, n_{S}^{2})$ such that $Q_{B}^{1}$ and $Q_{B}^{2}$ are solutions of $\max_{(q_{1} \geq 0, q_{2} \geq 0)} U_{B}(q_{1}, q_{2} ,n_{S}^{1}, n_{S}^{2}) − p_{1}q_{1} − p_{2}q_{2}$. 
 - Let $V_{B}(p_{1}, p_{2}, n_{S}^{1}, n_{S}^{2})$ denote the corresponding indirect utility
 
+**Developers**
 
+- Strictly increasing convex cost $C_{S}(q_{S})$ for a (representative) developer to develop $q_{S}$ applications 
+- Once applications are developed, the developer bears the platform-specific cost $C_{i}(q_{i}) = c_{i}q_{i}$, with $c_{i} \geq 0$, to make $q_{i}$ applications available on platform $i$ (with $0 \leq q_{i} \leq q_{S}$)
+- For the moment, assume that there are no porting costs for all platforms, or $ci = 0$ for all $i \in \mathcal{P}$
 
 
 
