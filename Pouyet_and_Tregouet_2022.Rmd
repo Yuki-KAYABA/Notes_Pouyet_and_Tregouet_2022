@@ -81,15 +81,39 @@ $$
 
 - Strictly increasing convex cost $C_{S}(q_{S})$ for a (representative) developer to develop $q_{S}$ applications 
 - Once applications are developed, the developer bears the platform-specific cost $C_{i}(q_{i}) = c_{i}q_{i}$, with $c_{i} \geq 0$, to make $q_{i}$ applications available on platform $i$ (with $0 \leq q_{i} \leq q_{S}$)
-- For the moment, assume that there are no porting costs for all platforms, or $ci = 0$ for all $i \in \mathcal{P}$
+- For the moment, assume that there are no porting costs for all platforms, or $c_{i} = 0$ for all $i \in \mathcal{P}$
+- Assume that platforms set some developer fees $(a_{i})_{i \in P}$ 
+- Let $n_{B}^{i}$ be the number of buyers using a device running platform $i$’s operating system
+- When the developer creates $q_{S}$ applications and publishes $q_{i}$ of these on platform $i$, its profit is given by $\sum_{i \in \mathcal{P}} (u_{S} n_{B}^{i} q_{i} − a_{i}q_{i}) − C_{S}(q_{S})$, where $u_{S}$ relates to the strength of indirect network effects from the developer side of the market
+- Since there are no porting costs, all applications are published on platform $i$ (that is, $q_{i} = q_{S}$) if $u_{S}n_{B}^{i} − a_{i} \geq 0$
+- The net profit writes as follows
+
+$$
+q_{S} \sum_{i \in \mathcal{P}} (u_{S} n_{B}^{i} − a_{i}) \mathbf{1}_{ \{ u_{S}n_{B}^{i} - a_{i} \geq 0 \} } − C_{S}(q_{S})
+$$
+
+- Let $Q_{S}((n_{B}^{i}, a_{i})_{i \in \mathcal{P}})$ be the number of applications $q_{S}$ that maximizes the net profit and denote by $V_{S}((n_{B}^{i}, a_{i})_{i \in \mathcal{P}})$ the corresponding developer profit
 
 
+**Timing**
 
+1. In stage 1, platforms set the shares of the per-user benefit left to manufacturers in exchange of using their operating systems and the fees charged to developers
+2. In stage 2, manufacturers choose the operating system for their devices
+3. In stage 3, manufacturers set the prices of their devices in stage 3
+4. In stage 4, buyers decide whether to buy a device, and, simultaneously, developers decide how much applications to develop and on which platforms to publish. 
 
+- All decisions are public and we look for the subgame-perfect equilibrium of the game
 
+### Stage 4: Participation Decisions
 
+**Developers' Choices of Operating System**
 
+- Note that any platform $i$ should never set a developer fee $a_{i}$ that discourages the developer from publishing on its operating system, for such strategy is weakly dominated by setting a zero fee
+- Hence, we can consider without loss of generality that $u_{S}n_{B}^{i} - a_{i} \geq 0$ for any platform $i \in \mathcal{P}$
+- Therefore, the representative developer is willing to publish all its applications on all the platforms (that is, $q_{i} = q_{S}$ for all $i \in \mathcal{P}$).
+- The developer’s profit can thus be rewritten more simply as $(u_{S} (n_{B}^{1} + n_{B}^{2}) − a)q_{S} − C_{S}(q_{S})$ where $a \equiv \sum_{i \in \mathcal{P}} a_{i}$ denotes the ‘total developer fee.’
 
+**Buyers' and Developers' Participation Decisions**
 
 
 

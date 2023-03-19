@@ -75,7 +75,10 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html"><i class="fa fa-check"></i><b>2</b> Details of the Paper</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model"><i class="fa fa-check"></i><b>2.1</b> Model</a></li>
+<li class="chapter" data-level="2.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model"><i class="fa fa-check"></i><b>2.1</b> Model</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#stage-4-participation-decisions"><i class="fa fa-check"></i><b>2.1.1</b> Stage 4: Participation Decisions</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -149,8 +152,40 @@
 <ul>
 <li>Strictly increasing convex cost <span class="math inline">\(C_{S}(q_{S})\)</span> for a (representative) developer to develop <span class="math inline">\(q_{S}\)</span> applications</li>
 <li>Once applications are developed, the developer bears the platform-specific cost <span class="math inline">\(C_{i}(q_{i}) = c_{i}q_{i}\)</span>, with <span class="math inline">\(c_{i} \geq 0\)</span>, to make <span class="math inline">\(q_{i}\)</span> applications available on platform <span class="math inline">\(i\)</span> (with <span class="math inline">\(0 \leq q_{i} \leq q_{S}\)</span>)</li>
-<li>For the moment, assume that there are no porting costs for all platforms, or <span class="math inline">\(ci = 0\)</span> for all <span class="math inline">\(i \in \mathcal{P}\)</span></li>
+<li>For the moment, assume that there are no porting costs for all platforms, or <span class="math inline">\(c_{i} = 0\)</span> for all <span class="math inline">\(i \in \mathcal{P}\)</span></li>
+<li>Assume that platforms set some developer fees <span class="math inline">\((a_{i})_{i \in P}\)</span></li>
+<li>Let <span class="math inline">\(n_{B}^{i}\)</span> be the number of buyers using a device running platform <span class="math inline">\(i\)</span>’s operating system</li>
+<li>When the developer creates <span class="math inline">\(q_{S}\)</span> applications and publishes <span class="math inline">\(q_{i}\)</span> of these on platform <span class="math inline">\(i\)</span>, its profit is given by <span class="math inline">\(\sum_{i \in \mathcal{P}} (u_{S} n_{B}^{i} q_{i} − a_{i}q_{i}) − C_{S}(q_{S})\)</span>, where <span class="math inline">\(u_{S}\)</span> relates to the strength of indirect network effects from the developer side of the market</li>
+<li>Since there are no porting costs, all applications are published on platform <span class="math inline">\(i\)</span> (that is, <span class="math inline">\(q_{i} = q_{S}\)</span>) if <span class="math inline">\(u_{S}n_{B}^{i} − a_{i} \geq 0\)</span></li>
+<li>The net profit writes as follows</li>
 </ul>
+<p><span class="math display">\[
+q_{S} \sum_{i \in \mathcal{P}} (u_{S} n_{B}^{i} − a_{i}) \mathbf{1}_{ \{ u_{S}n_{B}^{i} - a_{i} \geq 0 \} } − C_{S}(q_{S})
+\]</span></p>
+<ul>
+<li>Let <span class="math inline">\(Q_{S}((n_{B}^{i}, a_{i})_{i \in \mathcal{P}})\)</span> be the number of applications <span class="math inline">\(q_{S}\)</span> that maximizes the net profit and denote by <span class="math inline">\(V_{S}((n_{B}^{i}, a_{i})_{i \in \mathcal{P}})\)</span> the corresponding developer profit</li>
+</ul>
+<p><strong>Timing</strong></p>
+<ol style="list-style-type: decimal">
+<li>In stage 1, platforms set the shares of the per-user benefit left to manufacturers in exchange of using their operating systems and the fees charged to developers</li>
+<li>In stage 2, manufacturers choose the operating system for their devices</li>
+<li>In stage 3, manufacturers set the prices of their devices in stage 3</li>
+<li>In stage 4, buyers decide whether to buy a device, and, simultaneously, developers decide how much applications to develop and on which platforms to publish.</li>
+</ol>
+<ul>
+<li>All decisions are public and we look for the subgame-perfect equilibrium of the game</li>
+</ul>
+<div id="stage-4-participation-decisions" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Stage 4: Participation Decisions<a href="details-of-the-paper.html#stage-4-participation-decisions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Developers’ Choices of Operating System</strong></p>
+<ul>
+<li>Note that any platform <span class="math inline">\(i\)</span> should never set a developer fee <span class="math inline">\(a_{i}\)</span> that discourages the developer from publishing on its operating system, for such strategy is weakly dominated by setting a zero fee</li>
+<li>Hence, we can consider without loss of generality that <span class="math inline">\(u_{S}n_{B}^{i} - a_{i} \geq 0\)</span> for any platform <span class="math inline">\(i \in \mathcal{P}\)</span></li>
+<li>Therefore, the representative developer is willing to publish all its applications on all the platforms (that is, <span class="math inline">\(q_{i} = q_{S}\)</span> for all <span class="math inline">\(i \in \mathcal{P}\)</span>).</li>
+<li>The developer’s profit can thus be rewritten more simply as <span class="math inline">\((u_{S} (n_{B}^{1} + n_{B}^{2}) − a)q_{S} − C_{S}(q_{S})\)</span> where <span class="math inline">\(a \equiv \sum_{i \in \mathcal{P}} a_{i}\)</span> denotes the ‘total developer fee.’</li>
+</ul>
+<p><strong>Buyers’ and Developers’ Participation Decisions</strong></p>
+</div>
 </div>
 </div>
             </section>
