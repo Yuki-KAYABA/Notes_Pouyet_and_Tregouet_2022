@@ -111,24 +111,62 @@ $$
 - Note that any platform $i$ should never set a developer fee $a_{i}$ that discourages the developer from publishing on its operating system, for such strategy is weakly dominated by setting a zero fee
 - Hence, we can consider without loss of generality that $u_{S}n_{B}^{i} - a_{i} \geq 0$ for any platform $i \in \mathcal{P}$
 - Therefore, the representative developer is willing to publish all its applications on all the platforms (that is, $q_{i} = q_{S}$ for all $i \in \mathcal{P}$).
-- The developer’s profit can thus be rewritten more simply as $(u_{S} (n_{B}^{1} + n_{B}^{2}) − a)q_{S} − C_{S}(q_{S})$ where $a \equiv \sum_{i \in \mathcal{P}} a_{i}$ denotes the ‘total developer fee.’
+- The developer’s profit can thus be rewritten more simply as $(u_{S} (n_{B}^{1} + n_{B}^{2}) − a)q_{S} − C_{S}(q_{S})$ where $a \equiv \sum_{i \in \mathcal{P}} a_{i}$ denotes the ‘total developer fee’
+- The number of applications $n_{S}$ that maximizes this profit is given by $n_{S} = Q_{S}(u_{S}(n_{B}^{1} + n_{B}^{2}) − a)$, where $Q_{S} = (C′_{S})^{-1}$
+- Another immediate consequence of the fact that $u_{S} n_{B}^{i} − a_{i} \geq 0$ for any platform $i$ is that whatever their choices of operating systems, manufacturers benefit from the same number of applications running on their devices: $n_{S}^{1} = n_{S}^{2} \equiv n_{S}$
+- The demand for device $k$ may now be written more simply as $n_{B}^{k} = Q_{B}^{k}(p_{k}, p_{l}, n_{S})$
+
 
 **Buyers' and Developers' Participation Decisions**
 
+- The number of buyers of each device and the number of applications must be consistent with each other and solve:
 
+$$
+\begin{align}
+n_{B}^{1} &= Q_{B}^{1} (p_{1}, p_{2} ,n_{S}) \\
+n_{B}^{2} &= Q_{B}^{2} (p_{2}, p_{1} ,n_{S}) \\
+n_{S} &= Q_{S}(u_{S}(n_{B}^{1} + n_{B}^{2}) − a) \\
+\end{align}
+$$
 
+- Assume that the solution is unique and interior for the relevant range of prices
+- That solution defines the buyers’ demands for devices, denoted by $D_{k}(p_{k}, p_{l}, a)$ with $k \neq l \in \{ 1, 2 \}$, and the number of applications developed (also called the developers’ demand), denoted by $D_{S}(p_{1}, p_{2}, a)$
+- The following usual properties hold: 
+  - $\partial D_{S} / \partial p_{k} < 0$ and $\partial D_{S} / \partial a < 0$
+  - $\partial D_{k} / \partial p_{k} < 0$ and $\partial D_{k} / \partial a < 0$
+- We further impose that $\partial D_{k} / \partial p_{k} + \partial D_{k} / \partial p_{l} < 0$
 
+**Impact of Networks Effects on Product Market Interactions**
 
+- The demand faced by a manufacturer may, indeed, either increase or decrease with the price of the rival manufacturer, depending on the strength of indirect network effects relative to the degree of product market competition
+- It follows that:
 
+$$
+\frac{\partial D_{k}}{\partial p_{l}} = \frac{\partial Q_{B}^{k}}{\partial p_{l}} + \frac{\partial Q_{B}^{k}}{\partial n_{S}}\frac{\partial D_{S}}{\partial p_{l}}
+$$
+which can be positive or negative
 
+- The intuition is as follows
+  - If $p_{l}$ increases, then some buyers are diverted from $M_{l}$, and $M_{k}$’s demand increases by $\partial Q_{B}^{k} / \partial p_{l}$
+  - The increase in $p_{l}$ has, moreover, a negative impact on the total number of buyers, since the direct price effect on buyers of device $l$ is stronger than the indirect price effect on buyers of device $k$ ($\partial Q_{B}^{l} / \partial p_{l} + \partial Q_{B}^{k} / \partial p_{l} < 0$)
+  - Since there are less buyers overall, there are fewer applications too, for developers find it less attractive to develop ($\partial D_{S} / \partial p_{l} < 0$)
+  - Because buyers value applications, this negatively affects $M_{k}$’s demand by $\partial Q_{B}^{k} / \partial n_{S}$
+- We therefore expect that:
+  - When indirect network effects are small, the rivalry effect created by product market competition dominates and $\partial D_{k} / \partial p_{l} \geq 0$, that is, devices are demand substitutes
+  - When product market competition is weak, then the interaction created by indirect network effects dominates and $\partial D_{k} / \partial p_{l} \leq 0$, that is, devices are demand complements
+- In the sequel, we shall focus on the case studied by the bulk of the literature on strategic vertical integration, namely the case where manufacturers’ products are demand substitutes:
 
+<u>Assumption 1</u>
 
+*Indirect network effects are not too strong relative to product market competition so that manufacturers’ products are demand substitutes: for $k \neq l$, for all $(p_{k}, p_{l}, a)$*
 
+$$
+\frac{\partial D_{k}}{\partial p_{l}} (p_{k}, p_{l}, a) \geq 0
+$$
 
+### Stage 3: Competition between Manufacturers
 
-
-
-
+- 次回ここから
 
 
 

@@ -78,6 +78,7 @@
 <li class="chapter" data-level="2.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model"><i class="fa fa-check"></i><b>2.1</b> Model</a>
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#stage-4-participation-decisions"><i class="fa fa-check"></i><b>2.1.1</b> Stage 4: Participation Decisions</a></li>
+<li class="chapter" data-level="2.1.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#stage-3-competition-between-manufacturers"><i class="fa fa-check"></i><b>2.1.2</b> Stage 3: Competition between Manufacturers</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -182,9 +183,67 @@ q_{S} \sum_{i \in \mathcal{P}} (u_{S} n_{B}^{i} − a_{i}) \mathbf{1}_{ \{ u_{S}
 <li>Note that any platform <span class="math inline">\(i\)</span> should never set a developer fee <span class="math inline">\(a_{i}\)</span> that discourages the developer from publishing on its operating system, for such strategy is weakly dominated by setting a zero fee</li>
 <li>Hence, we can consider without loss of generality that <span class="math inline">\(u_{S}n_{B}^{i} - a_{i} \geq 0\)</span> for any platform <span class="math inline">\(i \in \mathcal{P}\)</span></li>
 <li>Therefore, the representative developer is willing to publish all its applications on all the platforms (that is, <span class="math inline">\(q_{i} = q_{S}\)</span> for all <span class="math inline">\(i \in \mathcal{P}\)</span>).</li>
-<li>The developer’s profit can thus be rewritten more simply as <span class="math inline">\((u_{S} (n_{B}^{1} + n_{B}^{2}) − a)q_{S} − C_{S}(q_{S})\)</span> where <span class="math inline">\(a \equiv \sum_{i \in \mathcal{P}} a_{i}\)</span> denotes the ‘total developer fee.’</li>
+<li>The developer’s profit can thus be rewritten more simply as <span class="math inline">\((u_{S} (n_{B}^{1} + n_{B}^{2}) − a)q_{S} − C_{S}(q_{S})\)</span> where <span class="math inline">\(a \equiv \sum_{i \in \mathcal{P}} a_{i}\)</span> denotes the ‘total developer fee’</li>
+<li>The number of applications <span class="math inline">\(n_{S}\)</span> that maximizes this profit is given by <span class="math inline">\(n_{S} = Q_{S}(u_{S}(n_{B}^{1} + n_{B}^{2}) − a)\)</span>, where <span class="math inline">\(Q_{S} = (C′_{S})^{-1}\)</span></li>
+<li>Another immediate consequence of the fact that <span class="math inline">\(u_{S} n_{B}^{i} − a_{i} \geq 0\)</span> for any platform <span class="math inline">\(i\)</span> is that whatever their choices of operating systems, manufacturers benefit from the same number of applications running on their devices: <span class="math inline">\(n_{S}^{1} = n_{S}^{2} \equiv n_{S}\)</span></li>
+<li>The demand for device <span class="math inline">\(k\)</span> may now be written more simply as <span class="math inline">\(n_{B}^{k} = Q_{B}^{k}(p_{k}, p_{l}, n_{S})\)</span></li>
 </ul>
 <p><strong>Buyers’ and Developers’ Participation Decisions</strong></p>
+<ul>
+<li>The number of buyers of each device and the number of applications must be consistent with each other and solve:</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+n_{B}^{1} &amp;= Q_{B}^{1} (p_{1}, p_{2} ,n_{S}) \\
+n_{B}^{2} &amp;= Q_{B}^{2} (p_{2}, p_{1} ,n_{S}) \\
+n_{S} &amp;= Q_{S}(u_{S}(n_{B}^{1} + n_{B}^{2}) − a) \\
+\end{align}
+\]</span></p>
+<ul>
+<li>Assume that the solution is unique and interior for the relevant range of prices</li>
+<li>That solution defines the buyers’ demands for devices, denoted by <span class="math inline">\(D_{k}(p_{k}, p_{l}, a)\)</span> with <span class="math inline">\(k \neq l \in \{ 1, 2 \}\)</span>, and the number of applications developed (also called the developers’ demand), denoted by <span class="math inline">\(D_{S}(p_{1}, p_{2}, a)\)</span></li>
+<li>The following usual properties hold:
+<ul>
+<li><span class="math inline">\(\partial D_{S} / \partial p_{k} &lt; 0\)</span> and <span class="math inline">\(\partial D_{S} / \partial a &lt; 0\)</span></li>
+<li><span class="math inline">\(\partial D_{k} / \partial p_{k} &lt; 0\)</span> and <span class="math inline">\(\partial D_{k} / \partial a &lt; 0\)</span></li>
+</ul></li>
+<li>We further impose that <span class="math inline">\(\partial D_{k} / \partial p_{k} + \partial D_{k} / \partial p_{l} &lt; 0\)</span></li>
+</ul>
+<p><strong>Impact of Networks Effects on Product Market Interactions</strong></p>
+<ul>
+<li>The demand faced by a manufacturer may, indeed, either increase or decrease with the price of the rival manufacturer, depending on the strength of indirect network effects relative to the degree of product market competition</li>
+<li>It follows that:</li>
+</ul>
+<p><span class="math display">\[
+\frac{\partial D_{k}}{\partial p_{l}} = \frac{\partial Q_{B}^{k}}{\partial p_{l}} + \frac{\partial Q_{B}^{k}}{\partial n_{S}}\frac{\partial D_{S}}{\partial p_{l}}
+\]</span>
+which can be positive or negative</p>
+<ul>
+<li>The intuition is as follows
+<ul>
+<li>If <span class="math inline">\(p_{l}\)</span> increases, then some buyers are diverted from <span class="math inline">\(M_{l}\)</span>, and <span class="math inline">\(M_{k}\)</span>’s demand increases by <span class="math inline">\(\partial Q_{B}^{k} / \partial p_{l}\)</span></li>
+<li>The increase in <span class="math inline">\(p_{l}\)</span> has, moreover, a negative impact on the total number of buyers, since the direct price effect on buyers of device <span class="math inline">\(l\)</span> is stronger than the indirect price effect on buyers of device <span class="math inline">\(k\)</span> (<span class="math inline">\(\partial Q_{B}^{l} / \partial p_{l} + \partial Q_{B}^{k} / \partial p_{l} &lt; 0\)</span>)</li>
+<li>Since there are less buyers overall, there are fewer applications too, for developers find it less attractive to develop (<span class="math inline">\(\partial D_{S} / \partial p_{l} &lt; 0\)</span>)</li>
+<li>Because buyers value applications, this negatively affects <span class="math inline">\(M_{k}\)</span>’s demand by <span class="math inline">\(\partial Q_{B}^{k} / \partial n_{S}\)</span></li>
+</ul></li>
+<li>We therefore expect that:
+<ul>
+<li>When indirect network effects are small, the rivalry effect created by product market competition dominates and <span class="math inline">\(\partial D_{k} / \partial p_{l} \geq 0\)</span>, that is, devices are demand substitutes</li>
+<li>When product market competition is weak, then the interaction created by indirect network effects dominates and <span class="math inline">\(\partial D_{k} / \partial p_{l} \leq 0\)</span>, that is, devices are demand complements</li>
+</ul></li>
+<li>In the sequel, we shall focus on the case studied by the bulk of the literature on strategic vertical integration, namely the case where manufacturers’ products are demand substitutes:</li>
+</ul>
+<p><u>Assumption 1</u></p>
+<p><em>Indirect network effects are not too strong relative to product market competition so that manufacturers’ products are demand substitutes: for <span class="math inline">\(k \neq l\)</span>, for all <span class="math inline">\((p_{k}, p_{l}, a)\)</span></em></p>
+<p><span class="math display">\[
+\frac{\partial D_{k}}{\partial p_{l}} (p_{k}, p_{l}, a) \geq 0
+\]</span></p>
+</div>
+<div id="stage-3-competition-between-manufacturers" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Stage 3: Competition between Manufacturers<a href="details-of-the-paper.html#stage-3-competition-between-manufacturers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>次回ここから</li>
+</ul>
 </div>
 </div>
 </div>
