@@ -36,7 +36,7 @@ library(bookdown)
 
 # Details of the Paper
 
-## Model
+## Model Setting
 
 - See Figure 1 in the paper
 - In this model, there are four types of players
@@ -166,9 +166,29 @@ $$
 
 ### Stage 3: Competition between Manufacturers
 
-- 次回ここから
-
-
-
+- In stage 3, manufacturers compete on the product market
+- Given a share $\beta_{k}$ of the per-user benefit that $M_{k}$ receives from the platform it has chosen and a total fee a paid by developers, let $\pi_{k}(β_{k}, p_{k}, p_{l}, a) = (p_{k} + β_{k}r) D_{k}(p_{k}, p_{l}, a)$ denote $M_{k}$’s profit
+- We make some assumptions on manufacturers’ best responses in prices that ensure the price competition subgame is ‘well-behaved’
+  - $M_{k}$’s best response, denoted by $R_{k}(\beta_{k}, p_{l}, a)$, is uniquely characterized by the first-order condition $\partial \pi_{k} / \partial p_{k} (\beta_{k}, R_{k}, p_{l}, a) = 0$
+  - $0 \leq \partial R_{k} / \partial p_{l} < 1$ for all $(\beta_{k}, p_{k}, p_{l}, a)$, so that prices of devices are strategic complements and best responses satisfy the usual stability assumption
+  - $M_{k}$’s best response decreases with $a$, that is, $\partial R_{k} / \partial a \leq 0$for all $(\beta_{k}, p_{k}, p_{l}, a)$
+- These assumptions ensure that there exists a unique pair of prices $(\hat{p}_{1}(\beta_{1}, \beta_{2}, a), \hat{p}_{2}(\beta_{2}, \beta_{1}, a)$) that form the Nash equilibrium of stage 3 of the game, and that the equilibrium price of a manufacturer is decreasing in its share of the per-user benefit and in the developer fee, or $\partial \hat{p}_{k} / \partial \beta_{k} < 0$ and $\partial \hat{p}_{k} / \partial a \leq 0$
+- We further impose that $| \partial \hat{p}_{k} / \partial \beta_{k} | < r$
+- Let $hat{\pi}_{k}(\beta_{k}, \beta_{l}, a) = \pi_{k}(\beta_{k}, \hat{p}_{k}(\beta_{k}, \beta_{l}, a), \hat{p}_{l}(\beta_{l}, \beta_{k}, a), a)$ denote $M_{k}$’s profit at the equilibrium of the subgame starting at stage 3
+- From the assumptions made above, we obtain the following:
+  - $\frac{\partial \hat{\pi}_{k}}{\partial a} (\beta_{k}, \beta_{l}, a) \leq 0$ for all $(\beta_{k}, \beta_{l}, a)$
+  - $\frac{\partial \hat{\pi}_{k}}{\partial \beta_{k}} (\beta_{k}, \beta_{l}, a) \leq 0$ for all $(\beta_{k}, \beta_{l}, a)$
+  
+  
+## Benchmarks
+  
+  
+## Vertial Integration
+  
+- Our analysis proceeds as follows:
+  - First, we show that vertical integration creates market power over developers
+  - Second, we study how such market power is exercised
+  - Thrid, its consequences on welfare
+  
 
 

@@ -75,11 +75,13 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html"><i class="fa fa-check"></i><b>2</b> Details of the Paper</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model"><i class="fa fa-check"></i><b>2.1</b> Model</a>
+<li class="chapter" data-level="2.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model-setting"><i class="fa fa-check"></i><b>2.1</b> Model Setting</a>
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#stage-4-participation-decisions"><i class="fa fa-check"></i><b>2.1.1</b> Stage 4: Participation Decisions</a></li>
 <li class="chapter" data-level="2.1.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#stage-3-competition-between-manufacturers"><i class="fa fa-check"></i><b>2.1.2</b> Stage 3: Competition between Manufacturers</a></li>
 </ul></li>
+<li class="chapter" data-level="2.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#benchmarks"><i class="fa fa-check"></i><b>2.2</b> Benchmarks</a></li>
+<li class="chapter" data-level="2.3" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#vertial-integration"><i class="fa fa-check"></i><b>2.3</b> Vertial Integration</a></li>
 </ul></li>
 </ul>
 
@@ -100,8 +102,8 @@
             <section class="normal" id="section-">
 <div id="details-of-the-paper" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Details of the Paper<a href="details-of-the-paper.html#details-of-the-paper" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="model" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Model<a href="details-of-the-paper.html#model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="model-setting" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Model Setting<a href="details-of-the-paper.html#model-setting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>See Figure 1 in the paper</li>
 <li>In this model, there are four types of players
@@ -242,9 +244,38 @@ which can be positive or negative</p>
 <div id="stage-3-competition-between-manufacturers" class="section level3 hasAnchor" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Stage 3: Competition between Manufacturers<a href="details-of-the-paper.html#stage-3-competition-between-manufacturers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>次回ここから</li>
+<li>In stage 3, manufacturers compete on the product market</li>
+<li>Given a share <span class="math inline">\(\beta_{k}\)</span> of the per-user benefit that <span class="math inline">\(M_{k}\)</span> receives from the platform it has chosen and a total fee a paid by developers, let <span class="math inline">\(\pi_{k}(β_{k}, p_{k}, p_{l}, a) = (p_{k} + β_{k}r) D_{k}(p_{k}, p_{l}, a)\)</span> denote <span class="math inline">\(M_{k}\)</span>’s profit</li>
+<li>We make some assumptions on manufacturers’ best responses in prices that ensure the price competition subgame is ‘well-behaved’
+<ul>
+<li><span class="math inline">\(M_{k}\)</span>’s best response, denoted by <span class="math inline">\(R_{k}(\beta_{k}, p_{l}, a)\)</span>, is uniquely characterized by the first-order condition <span class="math inline">\(\partial \pi_{k} / \partial p_{k} (\beta_{k}, R_{k}, p_{l}, a) = 0\)</span></li>
+<li><span class="math inline">\(0 \leq \partial R_{k} / \partial p_{l} &lt; 1\)</span> for all <span class="math inline">\((\beta_{k}, p_{k}, p_{l}, a)\)</span>, so that prices of devices are strategic complements and best responses satisfy the usual stability assumption</li>
+<li><span class="math inline">\(M_{k}\)</span>’s best response decreases with <span class="math inline">\(a\)</span>, that is, <span class="math inline">\(\partial R_{k} / \partial a \leq 0\)</span>for all <span class="math inline">\((\beta_{k}, p_{k}, p_{l}, a)\)</span></li>
+</ul></li>
+<li>These assumptions ensure that there exists a unique pair of prices <span class="math inline">\((\hat{p}_{1}(\beta_{1}, \beta_{2}, a), \hat{p}_{2}(\beta_{2}, \beta_{1}, a)\)</span>) that form the Nash equilibrium of stage 3 of the game, and that the equilibrium price of a manufacturer is decreasing in its share of the per-user benefit and in the developer fee, or <span class="math inline">\(\partial \hat{p}_{k} / \partial \beta_{k} &lt; 0\)</span> and <span class="math inline">\(\partial \hat{p}_{k} / \partial a \leq 0\)</span></li>
+<li>We further impose that <span class="math inline">\(| \partial \hat{p}_{k} / \partial \beta_{k} | &lt; r\)</span></li>
+<li>Let <span class="math inline">\(hat{\pi}_{k}(\beta_{k}, \beta_{l}, a) = \pi_{k}(\beta_{k}, \hat{p}_{k}(\beta_{k}, \beta_{l}, a), \hat{p}_{l}(\beta_{l}, \beta_{k}, a), a)\)</span> denote <span class="math inline">\(M_{k}\)</span>’s profit at the equilibrium of the subgame starting at stage 3</li>
+<li>From the assumptions made above, we obtain the following:
+<ul>
+<li><span class="math inline">\(\frac{\partial \hat{\pi}_{k}}{\partial a} (\beta_{k}, \beta_{l}, a) \leq 0\)</span> for all <span class="math inline">\((\beta_{k}, \beta_{l}, a)\)</span></li>
+<li><span class="math inline">\(\frac{\partial \hat{\pi}_{k}}{\partial \beta_{k}} (\beta_{k}, \beta_{l}, a) \leq 0\)</span> for all <span class="math inline">\((\beta_{k}, \beta_{l}, a)\)</span></li>
+</ul></li>
 </ul>
 </div>
+</div>
+<div id="benchmarks" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Benchmarks<a href="details-of-the-paper.html#benchmarks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="vertial-integration" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Vertial Integration<a href="details-of-the-paper.html#vertial-integration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Our analysis proceeds as follows:
+<ul>
+<li>First, we show that vertical integration creates market power over developers</li>
+<li>Second, we study how such market power is exercised</li>
+<li>Thrid, its consequences on welfare</li>
+</ul></li>
+</ul>
 </div>
 </div>
             </section>
